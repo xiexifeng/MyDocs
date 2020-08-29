@@ -1,0 +1,73 @@
+git config --global http.sslVerify false
+git config --system --unset credential.helper
+git init
+git add readme.txt
+git commit -m "Wrote a readme file"
+git remote remove origin
+git remote add origin http://git.pm.bwoilmarine.com/MarineOnline_Service/logistics_api.git
+git push -u origin master
+
+从命令行创建一个新的仓库
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://git.pm.bwoilmarine.com/MarineOnline_Service/logistics_api.git
+git push -u origin master
+
+从命令行推送已经创建的仓库
+git remote add origin https://git.pm.bwoilmarine.com/xiezb/logisticts_api.git
+git push -u origin master
+
+
+
+git remote add origin https://github.com/xiexifeng/tweet.git
+git pull origin master
+
+git branch 1.0.0.20191216
+git push origin 1.0.0.20191216
+
+git checkout 20191229
+git merge origin/20191209
+强制覆盖本地代码
+git fetch --all && git reset --hard origin/20191229 && git pull
+
+git checkout -b 20191227
+
+1、查看所有分支
+
+git branch -a
+
+2、查看当前所在分支
+
+git branch
+
+3、删除本地的bug_xzx分支
+
+git branch -d bug_xzx
+
+4、删除远程的bug_xzx分支
+
+git push origin --delete bug_xzx
+
+git tag -a 1.0.0 -m '202001031437'
+git push origin 1.0.0
+git push origin --tags
+
+git tag -d 1.0.0
+git push origin :refs/tags/1.0.0
+
+git remote -v
+git remote set-url origin http://git.pm.emarineonline.com/Brightoil-Marine-Online/<your rep name>.git/
+
+git log --follow -p <filename>
+
+--follow参数表示跟踪文件名修改
+-p参数表示显示每个提交的不同
+
+grep -r "{关键字}"  {路径}
+
+例如：
+
+grep -r "test"  /data/reports
+
